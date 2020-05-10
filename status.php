@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "id13517175_hemanth";
-$password = "p<Fl~>^#%zW^60bT";                 // server connection
-$dbname = "id13517175_testproject";
+$username = "hemanth";
+$password = "";                 // server connection
+$dbname = "testproject";
 // start session
 
 // do check

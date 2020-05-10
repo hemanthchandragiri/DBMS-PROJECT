@@ -1,9 +1,9 @@
 <?php
 
 
-define ('DB_USERNAME', "id13517175_hemanth");
-define ('DB_PASSWORD', "p<Fl~>^#%zW^60bT");
-define ('DB_DATABASE', "id13517175_testproject");
+define ('DB_USERNAME', "hemanth");
+define ('DB_PASSWORD', "");
+define ('DB_DATABASE', "testproject");
 define ('DB_SERVER', "localhost");
 
 
