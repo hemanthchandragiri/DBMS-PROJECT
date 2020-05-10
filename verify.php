@@ -74,22 +74,13 @@ body{
   }
 </style>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
 		<meta charset="utf-8">
-
 		<title>Email Verificaton</title>
-
 		<meta name="generator" content="Bootply" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-
-		<!--[if lt IE 9]>
-
+		
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-
-		<![endif]-->
 
 		<link href="css/styles.css" rel="stylesheet">
 
@@ -107,57 +98,37 @@ body{
       <div class="col-xs-12">
 
         <h3>Verification of Email for Complaint Submission</h3>
-
 		<hr >
 
 		<form name="insert" action="post.php" method="post">
-
      <table width="100%"  border="0">
-
     <tr>
-
-
-
     <td width="71%"><input type="text" name="name" id="name" value=""  class="form-control" required placeholder="Username" /></td>
-
   </tr>  
-
-  <tr>
-
- 
-
+  <tr> 
     <td width="71%"><input type="email" name="email" id="email" value=""  class="form-control" required placeholder="Email" /></td>
 
   </tr>
-
-
-
- <tr>
-
-  
-
+         <tr> 
     <td width="71%"><input type="submit" name="submit" value="Submit" class="btn-group-sm" /> </td>
 
   </tr>
-  
-
-</table>
+  </table>
 
  </form>
-
 
       </div>
 
     </div>
 
-  </div><!--/center-->
+  </div>
 <p>Already Registered ?
   <a href="index.html">submit your complaint here</a></p>
     <p><a href="mailto:chandragirihemanth2001@gmail.com">Forgot Password? Mail us Here!</a></p>
 
 </div><!--/container-fluid-->
 
-	<!-- script references -->
+	
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
