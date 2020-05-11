@@ -115,13 +115,13 @@ require('confid.php');
 
 require('connection.php');
 extract($_POST);
- $email = $_POST['email'];  //gets username from login
+ $email = $_POST['email'];  //gets username from complaint form
     $password = $_POST['password'];  //gets password here i didn't used get because it's not prefered when we use passwords
       
         //to prevent from mysqli injection  
           //removes backslashes
         $password = stripcslashes($password);  
-         //escapes special charaacters 
+         //escapes special charaacters because our password won't contain symbols
         
       
         $sql = "SELECT *from registration where email = '$email' and password = '$password'"; //gets username and password from table and checks with input 
@@ -129,7 +129,7 @@ extract($_POST);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  //fetches result as an array
         $count = mysqli_num_rows($result);//returns no.of rows   
           
-        if($count == 1){  
+        if($count == 1){  //if the returned output is not 0 i.e, 1 we assume user is valid and does the following
            
              session_start();
              $_SESSION['loggedin'] = true;
@@ -153,7 +153,7 @@ $success = $mysqli->query($sql1);//a variable for checking sql is correct or not
 if (!$success) {
     die("Complaint not submitted.. please recheck data you submitted ".$mysqli->error);
 }
-if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {//if the image is uploaded succesfully into files.
       echo"Your complaint is submitted . Click on Home to go back. <br>
       Click on Admin Login to view other complaints";
     }else{
@@ -168,7 +168,7 @@ else{
 ?>
 </div>
 <script type="text/javascript"> 
-function myFunction() {
+function myFunction() {//gets the whole division with id topnav
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";

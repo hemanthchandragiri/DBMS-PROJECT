@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     echo " <p> <font color =white>connected to database</font></p>" ;
 
 $sql = "SELECT id,rollno,date,image,status FROM complaint ";
-$result = $conn->query($sql);
+$result = $conn->query($sql);// variable for checking if it is success
 
 
 if ($result->num_rows > 0) {

@@ -3,14 +3,14 @@
 require('config.php');
 extract($_POST);
 $host = "localhost";
-$user='id13517175_hemanth';
-$password='p<Fl~>^#%zW^60bT';
-$db_name='id13517175_testproject';
+$user='hemanth';
+$password='';
+$db_name='testproject';
 $con =mysqli_connect($host,$user,$password,$db_name);
 $name=$_POST['name'];
 $email=$_POST['email'];
 function randomPassword() {
-    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';//generates a random password from this
     $pass = array(); //remember to declare $pass as an array
     $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
     for ($i = 0; $i < 8; $i++) {
@@ -19,11 +19,8 @@ function randomPassword() {
     }
     return implode($password); //turn the array into a string
 }
-$password= randompassword();
-$status=0;
-
-$activationcode=md5($email.time());
-$sql="select * from registration where ( email='$email');";
+$password= randompassword();//calling this function to generate a random password.
+$sql="select * from registration where ( email='$email');";//checks if email exists
         $res=mysqli_query($con,$sql);
         if (mysqli_num_rows($res) > 0) {
         // output data of each row
@@ -45,13 +42,13 @@ $to=$email;
 
 $msg= "Thanks for new Registration.";   
 
-$subject="Email verification(mess complaints)";
+$subject="Email verification(mess complaints)";//email heading
 
 $headers .= "MIME-Version: 1.0"."\r\n";
 
 $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
 
-$headers .= 'From:mess complaints <hemanthchandragiri2001@gmail.com>'."\r\n";
+$headers .= 'From:mess complaints <hemanthchandragiri2001@gmail.com>'."\r\n";// from ... information
 
         
 
@@ -67,9 +64,9 @@ $ms.="<div style='padding-top:8px;'>You have registered for mess complaints form
 
 mail($to,$subject,$ms,$headers);
 
-echo "<script>alert('Registration successful, please verify in the registered Email-Id');</script>";
+echo "<script>alert('Registration successful, please verify in the registered Email-Id');</script>";//alert script
 
-echo "<script>window.location = 'https://messcomplaint.000webhostapp.com/';</script>";;
+echo "<script>window.location = 'https://messcomplaint.000webhostapp.com/';</script>";
 
 }
 

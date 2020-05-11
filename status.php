@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-} else {
+} else {//if user is not logged in
     echo "Please log in first to see this page.";
 }
 // Create connection
