@@ -44,7 +44,7 @@
         </div>
         <div class="form-group2">
             <label>Email:</label>
-            <input type="email" name="email" class="form-control" required placeholder="Registered Email(e.g. esd14i055@iiitdm.ac.in)">
+            <input type="email" name="email" class="form-control" required placeholder="Registered Email(e.g. esd14i055@iiitdm.ac.in)"pattern=".+@iiitdm.ac.in">
         </div>
         <div class ="form-group3">
             <label>Select Time:</label>
@@ -94,11 +94,11 @@
         </div>
         <asp:TextBox ID="category" runat="server"></asp:TextBox>
 <div class="form-group11">
-    <label>Password:</label>
-    <input type="password" name="password" id="password" required placeholder="password">
+    <label>Password:</label><br>
+    <input type="password" name="password" id="password" required placeholder="password"><br>
     <input type="checkbox" onclick="myFunctionk()" ><label>Show Password</label>
 </div>
-
+<br>
     
     <div>
         <div class ="ct-btn">

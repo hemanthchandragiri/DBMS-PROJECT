@@ -12,8 +12,8 @@ body{
     .container-fluid{
         	text-align: center;
   margin:auto;
-	width:300px;
-	height:300px;
+	width:350px;
+	height:375px;
   background: #0c151b;  
   border-radius: 10px;
   box-shadow: 0px 10px 36px 12px rgba(0,0,0,1);
@@ -96,7 +96,7 @@ body{
     <div class="row">
 
       <div class="col-xs-12">
-
+<br>
         <h3>Verification of Email for Complaint Submission</h3>
 		<hr >
 

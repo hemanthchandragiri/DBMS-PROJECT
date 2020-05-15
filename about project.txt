@@ -1,0 +1,53 @@
+please read this before downloading this files
+
+download these files in a folder in *htdocs* in your xampp folder 
+
+create a database named testproject and two tables in that namely complaint and login
+
+the structure is given below
+1.complaint Table
+	1.id -- primary not null auto increment
+	1.username--varchar(100)
+	2.rollno--varchar(15)
+	3.time--char(20)
+	4.email--varchar(100)
+	5.day--char(20)
+	6.complaint--text
+	7.date--date
+	8.complaintdate--date
+	9.week--char(20)
+	10.image--varchar(100)
+2.login
+	1.username--varchar(100)
+	2.password--varchar(100)
+		
+COMPLAINT:
+
+CREATE TABLE `complaint` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `rollno` varchar(15) NOT NULL,
+  `time` char(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `day` char(20) NOT NULL,
+  `complaint` text NOT NULL,
+  `date` date NOT NULL,
+  `complaintdate` date NOT NULL,
+  `week` char(20) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `status` varchar(20) DEFAULT 'not resolved', PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+logintable:
+CREATE TABLE `login` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `login` (`username`, `password`) VALUES
+('Hemanth', 'hemanth@2001'),
+('dbms', '12345');
+registration table:
+name,passwword, email
